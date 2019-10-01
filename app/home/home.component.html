@@ -1,0 +1,26 @@
+<ActionBar title="Home" class="action-bar">
+</ActionBar>
+
+<GridLayout>
+    <ScrollView class="page">
+        <StackLayout class="home-panel">
+            <!--Add your page content here-->
+            <TabView height="300px">
+                <StackLayout *tabItem="{title: 'Tab 1'}">
+                    <Label text="Label in Tab 1"></Label>
+                </StackLayout>
+                <StackLayout *tabItem="{title: 'Tab 2'}">
+                    <Label text="Label in Tab 2"></Label>
+                </StackLayout>
+            </TabView>
+            <Button text="Button" (tap)="onButtonTap()"></Button>
+            <ActivityIndicator [busy]="isBusy" class="activity-indicator"></ActivityIndicator>
+            <Label textWrap="true" text="Play with NativeScript!" class="h2 description-label"></Label>
+            <Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
+                class="h2 description-label"></Label>
+            <Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
+                class="h2 description-label"></Label>
+
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
